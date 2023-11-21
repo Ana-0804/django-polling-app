@@ -1,6 +1,6 @@
-# Blink Simple Blog Rest API
+# Simple poll 
 
-> This is Simple Blog Backend  built using Django 
+> This is Simple poll Backend  built using Django 
 
 ## Technologies Used
 - python - version 3.11.0
