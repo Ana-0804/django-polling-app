@@ -52,7 +52,18 @@ def vote(request, poll_id):
 
 def results(request, poll_id):
     poll = Poll.objects.get(pk=poll_id)
+
+    total_votes = poll.option_one_count + poll.option_two_count + poll.option_three_count + poll.option_four_count
+    option_one_percentage = (poll.option_one_count // total_votes) * 100
+    option_two_percentage = (poll.option_two_count // total_votes) * 100
+    option_three_percentage = (poll.option_three_count // total_votes) * 100
+    option_four_percentage = (poll.option_four_count // total_votes) * 100
+
     context = {
-        'poll' : poll
+        'poll' : poll,
+        'option_one_percentage'  : option_one_percentage,
+        'option_two_percentage'  : option_two_percentage,
+        'option_three_percentage': option_three_percentage,
+        'option_four_percentage' : option_four_percentage
     }
     return render(request, 'poll/results.html', context)

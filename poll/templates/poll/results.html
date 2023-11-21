@@ -15,14 +15,18 @@
             </div>
 
             <ul class="list-group">
-                <li class="list-group-item">{{ poll.option_one }} &mdash; <strong>{{ poll.option_one_count }}</strong></li>
-                <li class="list-group-item">{{ poll.option_two }} &mdash; <strong>{{ poll.option_two_count }}</strong></li>
-                <li class="list-group-item">{{ poll.option_three }} &mdash; <strong>{{ poll.option_three_count }}</strong></li>
-                <li class="list-group-item">{{ poll.option_four }} &mdash; <strong>{{ poll.option_four_count }}</strong></li>
+                <li class="list-group-item">{{ poll.option_one }} &mdash; <strong>Total Votes : {{ poll.option_one_count }}</strong>
+                    &mdash; <strong> Percentage is : {{ option_one_percentage }}</strong></li>
+                <li class="list-group-item">{{ poll.option_two }} &mdash; <strong>Total Votes : {{ poll.option_two_count }}</strong>
+                    &mdash; <strong>Percentage is : {{ option_two_percentage }}</strong></li>
+                <li class="list-group-item">{{ poll.option_three }} &mdash; <strong>Total Votes : {{ poll.option_three_count }}</strong>
+                    &mdash; <strong>Percentage is : {{ option_three_percentage }}</strong></li>
+                <li class="list-group-item">{{ poll.option_four }} &mdash; <strong>Total Votes : {{ poll.option_four_count }}</strong>
+                    &mdash; <strong>Percentage is : {{ option_four_percentage }}</strong></li>
             </ul>
 
             <div class="panel-footer">
-                Total &mdash; <strong>{{ poll.total }}</strong>
+                Overall Votes Submitted :  &mdash; <strong>{{ poll.total }}</strong>
             </div>
 
         </div>
